@@ -50,6 +50,12 @@ Since this account is only for running Home Assistant the extra arguments of `-r
 ```bash
 sudo useradd -rm homeassistant -G dialout,gpio,i2c
 ```
+Now create a password for user homeassistant.
+
+'''bash
+sudo passwd homeassistant
+'''
+It will prompt for the password twice.
 
 Next we will create a directory for the installation of Home Assistant and change the owner to the `homeassistant` account.
 
@@ -58,7 +64,6 @@ cd /srv
 sudo mkdir homeassistant
 sudo chown homeassistant:homeassistant homeassistant
 ```
-
 Next up is to create and change to a virtual environment for Home Assistant. This will be done as the `homeassistant` account.
 
 ```bash
